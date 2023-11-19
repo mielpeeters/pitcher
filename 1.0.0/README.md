@@ -43,4 +43,4 @@ A simple and modern slideshow tool featuring configurable theme with automatic c
 ![screenshot of the third generated slide](./assets/example_3.png)
 ![screenshot of the fourth generated slide](./assets/example_4.png)
 ![screenshot of the fifth generated slide](./assets/example_5.png)
-![screenshot of the sixth generated slide](./assets/example_4.png)
+![screenshot of the sixth generated slide](./assets/example_6.png)
