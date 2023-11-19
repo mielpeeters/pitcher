@@ -17,7 +17,9 @@
 #new_slide()
 
 = My First Pitcher Slide
-#lorem(20)
+#figure(
+  image("./assets/model.svg"),
+)
 
 #new_slide()
 

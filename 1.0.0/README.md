@@ -3,6 +3,8 @@ A simple and modern slideshow tool featuring configurable theme with automatic c
 
 ---
 
+## Usage
+
 ```typst
 #import "@preview/pitcher:1.0.0": *
 
@@ -22,7 +24,9 @@ A simple and modern slideshow tool featuring configurable theme with automatic c
 #new_slide()
 
 = My First Pitcher Slide
-#lorem(20)
+#figure(
+  image("image.svg")
+)
 
 #new_slide()
 
@@ -34,4 +38,9 @@ A simple and modern slideshow tool featuring configurable theme with automatic c
 )
 ```
 
-
+![screenshot of the first generated slide](./assets/example_1.png)
+![screenshot of the second generated slide](./assets/example_2.png)
+![screenshot of the third generated slide](./assets/example_3.png)
+![screenshot of the fourth generated slide](./assets/example_4.png)
+![screenshot of the fifth generated slide](./assets/example_5.png)
+![screenshot of the sixth generated slide](./assets/example_4.png)
