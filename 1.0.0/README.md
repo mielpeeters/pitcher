@@ -11,7 +11,7 @@ A simple and modern slideshow tool featuring configurable theme with automatic c
 #let style = define_style(color: rgb("#3271a8"), font: "IBM Plex Sans")
 
 #show: slides.with(
-  title: "pitcher slides",
+  title: "Pitcher Slides",
   description: "simple and modern",
   style: style,
   title_color: true,
