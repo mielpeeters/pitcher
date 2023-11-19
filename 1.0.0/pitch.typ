@@ -321,7 +321,7 @@ show: accent_slide.with(style)
 
   show: default_page_settings.with(style, title: title, description: description)
 
-  title_slide(style: style, title: title, description: description, title_color: title_color, args.named())
+  title_slide(style: style, title: title, title_color: title_color, ..args)
 
   body
 }

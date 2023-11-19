@@ -16,4 +16,5 @@ keywords = [
     "pitc",
     "pitcher",
 ]
-exclude = ["README.md"]
+exclude = ["README.md", "assets/*", "examples/*", "*.pdf"]
+compiler = "0.9.0"
