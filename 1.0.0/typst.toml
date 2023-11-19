@@ -1,12 +1,19 @@
 [package]
-# think of a good name
-name = "slider"
+name = "pitcher"
 version = "1.0.0"
 entrypoint = "lib.typ"
 authors = ["Miel Peeters"]
 description = "Use this template for creating simple, modern and configurable presentations."
 license = "GPL-3.0-only"
-# TODO: create the repo and link here
-repository = "https://www.github.com/mielpeeters/typst-"
-keywords = ["presentation", "slides", "template", "modern", "simple", "minimal"]
+repository = "https://www.github.com/mielpeeters/pitcher"
+keywords = [
+    "presentation",
+    "slides",
+    "template",
+    "modern",
+    "simple",
+    "minimal",
+    "pitc",
+    "pitcher",
+]
 exclude = ["README.md"]

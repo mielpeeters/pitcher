@@ -202,7 +202,7 @@
   }
 }
 
-#let title_slide(style: (), title: "", description: "", date: "", title_color: false, args: ()) = {
+#let title_slide(style: (), title: "", title_color: false, ..args) = {
   let authors = ""
   if args.named().keys().contains("author") {
     authors = to_string(args.named().at("author"))
@@ -222,11 +222,13 @@
     #title \
 
     #set text(size: 60pt, weight: 800, fill: luma(255))
-    #if (description.len() != 0) [
+    #if args.named().keys().contains("description") [
+      #let description = args.named().at("description")
+
       #v(-47pt)
-      #text(size: 20pt)[
-        #description \
-      ]
+      #set text(size: 20pt)
+
+      #description 
 
       #v(50pt)
       #set align(right)
@@ -282,16 +284,44 @@ show: accent_slide.with(style)
   body
 }
 
-#let slides(title: "", description: "", date: "", style: ("color": rgb("#0328fc"), font: "Fira Sans"), title_color: false, ..args, body) = {
-  let primary_color = style.primary_color
-  let secondary_color = style.secondary_color
-  let subtle_color = style.subtle_color
-  let font_color = style.font_color
-  let font_subtle_color = style.font_subtle_color 
+// create slides using this function:
+// 
+// ```typst
+// #import "@preview/pitcher:1.0.0": *
+//
+// #show: slides.with(
+//   title: "Title",
+//   description: "Description",
+//   style: define_style(color: rgb("#3271a8"), font: "IBM Plex Sans"),
+//   title_color: true,
+// )
+// 
+// #new_slide()
+// = My First Pitcher Slide
+// #lorem(20)
+// ```
+#let slides(title_color: false, ..args, body) = {
+  // default title is empty
+  let title = ""
+  if args.named().keys().contains("title") {
+    title = args.named().at("title")
+  }
+
+  // default description is empty
+  let description = ""
+  if args.named().keys().contains("description") {
+    description = args.named().at("description")
+  }
+  
+  // default style is blue with IBM Plex Sans font
+  let style = define_style(color: rgb("#3271a8"), font: "IBM Plex Sans")
+  if args.named().keys().contains("style") {
+    style = args.named().at("style")
+  }
 
   show: default_page_settings.with(style, title: title, description: description)
 
-  title_slide(style: style, title: title, description: description, date: date, title_color: title_color, args: args)
+  title_slide(style: style, title: title, description: description, title_color: title_color, args.named())
 
   body
 }

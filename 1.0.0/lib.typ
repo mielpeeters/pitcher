@@ -1,2 +1,2 @@
-#import "slides.typ": *
+#import "pitch.typ": *
 
