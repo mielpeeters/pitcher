@@ -1,4 +1,4 @@
-#import "@preview/pitcher:1.0.0": *
+#import "@preview/pitcher:0.1.0": *
 
 #let style = define_style(color: rgb("#3271a8"), font: "IBM Plex Sans")
 
